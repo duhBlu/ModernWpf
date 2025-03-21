@@ -355,7 +355,7 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(AutoSuggestBoxPage));
             AddPage(typeof(ButtonsPage));
             AddPage(typeof(CalendarPage));
-            //AddPage(typeof(CheckBoxPage));
+            AddPage(typeof(CheckBoxPage));
             AddPage(typeof(ComboBoxPage));
             AddPage(typeof(CommandBarPage));
             AddPage(typeof(CommandBarFlyoutPage));
@@ -365,7 +365,7 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(DatePickerPage));
             AddPage(typeof(ExpanderPage));
             AddPage(typeof(FlyoutPage));
-            //AddPage(typeof(GridSplitterPage));
+            AddPage(typeof(GridSplitterPage));
             AddPage(typeof(GridViewPage));
             AddPage(typeof(GroupBoxPage));
             AddPage(typeof(HyperlinkButtonPage));
@@ -379,7 +379,7 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(NumberBoxPage));
             AddPage(typeof(PasswordBoxPage));
             AddPage(typeof(PersonPicturePage));
-            //AddPage(typeof(PopupPlacementPage));
+            AddPage(typeof(PopupPlacementPage));
             AddPage(typeof(ProgressPage), "Progress Controls");
             AddPage(typeof(RadioButtonsPage));
             AddPage(typeof(RatingControlPage));
@@ -388,7 +388,7 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(SimpleStackPanelPage));
             AddPage(typeof(SliderPage));
             AddPage(typeof(SplitViewPage));
-            //AddPage(typeof(StatusBarPage));
+            AddPage(typeof(StatusBarPage));
             AddPage(typeof(TabControlPage));
             AddPage(typeof(PivotPage), "TabControlPivotStyle");
             AddPage(typeof(TextBoxPage));
