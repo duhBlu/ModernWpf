@@ -8,10 +8,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
-using Windows.Foundation.Collections;
 using ModernWpf.Controls;
 using Common;
-using System;
 using System.Windows.Controls;
 
 #if USING_TAEF
@@ -119,12 +117,12 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
             {
                 var collections = new List<IEnumerable>();
                 collections.Add(new ObservableVectorWithUniqueIds(Enumerable.Range(0, 10)));
-                collections.Add(new ObservableCollection<int>(Enumerable.Range(0,10)));
+                collections.Add(new ObservableCollection<int>(Enumerable.Range(0, 10)));
 
-                foreach(var collection in collections)
+                foreach (var collection in collections)
                 {
                     var dataSource = new ItemsSourceView(collection);
-                    foreach(int i in collection)
+                    foreach (int i in collection)
                     {
                         Verify.AreEqual(i, dataSource.IndexOf(i));
                     }
@@ -145,7 +143,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 var nullContainingEnumerable = new CustomEnumerable();
                 testingItemsSourceView = new ItemsSourceView(nullContainingEnumerable);
 
-                Verify.AreEqual(1,testingItemsSourceView.IndexOf(null));
+                Verify.AreEqual(1, testingItemsSourceView.IndexOf(null));
 
             });
         }
@@ -422,7 +420,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
         class CustomEnumerable : IEnumerable<object>
         {
             private List<string> myList = new List<string>();
-            
+
             public CustomEnumerable()
             {
                 myList.Add("text");

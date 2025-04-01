@@ -50,7 +50,7 @@ namespace ModernWpf.Controls
 
         public int GetRealizedElementCount()
         {
-            return IsVirtualizingContext?
+            return IsVirtualizingContext ?
                 m_realizedElements.Count : m_context.ItemCount;
         }
 

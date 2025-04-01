@@ -263,7 +263,7 @@ namespace ModernWpf.SampleApp.ControlPages
             {
                 Add(new BrushResourceInfo(key));
             }
-        }        
+        }
     }
 
     public class BrushResourceInfo : IHasKey

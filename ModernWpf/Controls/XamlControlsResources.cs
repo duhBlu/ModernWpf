@@ -13,6 +13,11 @@ namespace ModernWpf.Controls
         public XamlControlsResources()
         {
             MergedDictionaries.Add(ControlsResources);
+
+#if EXTENDED_WPF_TOOLKIT_27_SUPPORTED
+            MergedDictionaries.Add(XceedControlsResources);
+#endif
+
             MergedDictionaries.Add(UISettingsResources);
 
             if (DesignMode.DesignModeEnabled)
@@ -37,7 +42,8 @@ namespace ModernWpf.Controls
                     else
                     {
                         MergedDictionaries.Remove(CompactResources);
-                    };
+                    }
+                    ;
                 }
             }
         }
@@ -51,6 +57,18 @@ namespace ModernWpf.Controls
                     _controlsResources = new ResourceDictionary { Source = PackUriHelper.GetAbsoluteUri("ControlsResources.xaml") };
                 }
                 return _controlsResources;
+            }
+        }
+        
+        internal static ResourceDictionary XceedControlsResources
+        {
+            get
+            {
+                if (_xceedControlsResources == null)
+                {
+                    _xceedControlsResources = new ResourceDictionary { Source = PackUriHelper.GetAbsoluteUri("XceedControlsResources.xaml") };
+                }
+                return _xceedControlsResources;
             }
         }
 
@@ -75,6 +93,7 @@ namespace ModernWpf.Controls
         }
 
         private static ResourceDictionary _controlsResources;
+        private static ResourceDictionary _xceedControlsResources;
         private static ResourceDictionary _compactResources;
         private static ResourceDictionary _uiSettingsResources;
 

@@ -6,7 +6,7 @@ using ToggleSwitch = ModernWpf.Controls.ToggleSwitch;
 
 namespace MUXControlsTestApp
 {
-    [TopLevelTestPage(Name = "SplitView", Icon="SplitView.png")]
+    [TopLevelTestPage(Name = "SplitView", Icon = "SplitView.png")]
     public sealed partial class SplitViewPage : TestPage
     {
         public SplitViewPage()

@@ -3,7 +3,6 @@
 
 using ModernWpf.Controls;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace MUXControlsTestApp.Samples
 {

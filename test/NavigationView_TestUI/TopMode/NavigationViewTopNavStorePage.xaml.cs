@@ -1,25 +1,22 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System.Windows;
-using System.Windows.Navigation;
-using System.Collections.ObjectModel;
+using ModernWpf;
+using ModernWpf.Controls;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows;
+using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Text;
-using Common;
-using System.Windows.Automation;
-
-using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
+using System.Windows.Navigation;
 //using MaterialHelperTestApi = Microsoft.UI.Private.Media.MaterialHelperTestApi;
 using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
-using NavigationViewItemSeparator = ModernWpf.Controls.NavigationViewItemSeparator;
 using NavigationViewItemBase = ModernWpf.Controls.NavigationViewItemBase;
-using NavigationViewSelectionFollowsFocus = ModernWpf.Controls.NavigationViewSelectionFollowsFocus;
 using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
-using ModernWpf.Controls;
-using ModernWpf;
+using NavigationViewItemSeparator = ModernWpf.Controls.NavigationViewItemSeparator;
+using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
+using NavigationViewSelectionFollowsFocus = ModernWpf.Controls.NavigationViewSelectionFollowsFocus;
 
 namespace MUXControlsTestApp
 {
@@ -64,7 +61,7 @@ namespace MUXControlsTestApp
             //MaterialHelperTestApi.SimulateDisabledByPolicy = false;
             base.OnNavigatedFrom(e);
         }
-        
+
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             m_menuItems.Add(new NavigationViewItem() { Content = "New Menu Item" });
@@ -153,9 +150,9 @@ namespace MUXControlsTestApp
                 ContentStackPanel.Margin = new Thickness(0, topNavHeight, 0, 0);
                 ContentScrollViewer.Margin = new Thickness(0, topNavHeight, 0, 0);
                 ContentScrollViewer.Padding = new Thickness(0, -topNavHeight, 0, 0);
-            }            
+            }
         }
-        
+
         private void MoveContentUnderTopnavTitleBar_Click(object sender, RoutedEventArgs e)
         {
             var topNavArea = FindVisualChildByName(NavView, "TopNavArea") as FrameworkElement;
@@ -169,7 +166,7 @@ namespace MUXControlsTestApp
                 //AppTitleBar
                 testFrame.ChangeBarVisibility(Visibility.Visible);
                 TitleBar.SetExtendViewIntoTitleBar(Application.Current.MainWindow, false);
-                
+
                 // Reset values
                 Grid.SetRow(topNavArea, 0);
                 ContentScrollViewer.Height = double.NaN;
@@ -182,7 +179,7 @@ namespace MUXControlsTestApp
                 //AppTitleBar
                 testFrame.ChangeBarVisibility(Visibility.Collapsed);
                 TitleBar.SetExtendViewIntoTitleBar(Application.Current.MainWindow, true);
-                
+
                 Grid.SetRow(topNavArea, 1);
                 ContentScrollViewer.Height = 200;
                 ContentStackPanel.Margin = new Thickness(0, topNavHeight, 0, 0);
@@ -248,7 +245,7 @@ namespace MUXControlsTestApp
         {
             ItemInvokedText.Text = string.Empty;
         }
-        
+
         private void OnNavItemInvoked(object sender, NavigationViewItemInvokedEventArgs e)
         {
             ItemInvokedText.Text = e.InvokedItem as string;

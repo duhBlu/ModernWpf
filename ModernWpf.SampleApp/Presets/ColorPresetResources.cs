@@ -41,7 +41,7 @@ namespace ModernWpf.SampleApp.Presets
             {
                 MergedDictionaries.Clear();
             }
-            
+
             string assemblyName = GetType().Assembly.GetName().Name;
             string currentPreset = PresetManager.Current.ColorPreset;
             var source = new Uri($"pack://application:,,,/{assemblyName};component/Presets/{currentPreset}/{TargetTheme}.xaml");

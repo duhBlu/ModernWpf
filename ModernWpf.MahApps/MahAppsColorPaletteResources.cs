@@ -134,7 +134,7 @@ namespace ModernWpf.MahApps
             }
         }
 
-        private bool SetAccentColor(ref Color? storage, Color? value, [CallerMemberName]string propertyName = null)
+        private bool SetAccentColor(ref Color? storage, Color? value, [CallerMemberName] string propertyName = null)
         {
             if (storage != value)
             {

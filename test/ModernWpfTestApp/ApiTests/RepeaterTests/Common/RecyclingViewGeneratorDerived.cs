@@ -4,15 +4,14 @@
 using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
 {
-    using RecyclingElementFactory = ModernWpf.Controls.RecyclingElementFactory;
-    using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
     using ElementFactoryGetArgs = ModernWpf.Controls.ElementFactoryGetArgs;
     using ElementFactoryRecycleArgs = ModernWpf.Controls.ElementFactoryRecycleArgs;
+    using RecyclingElementFactory = ModernWpf.Controls.RecyclingElementFactory;
+    using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
 
     public class RecyclingElementFactoryDerived : RecyclingElementFactory
     {

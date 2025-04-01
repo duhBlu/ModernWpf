@@ -289,7 +289,7 @@ namespace MUXControlsTestApp
 
         private void BlueBackground_Click(object sender, RoutedEventArgs e)
         {
-            RootSampleControlsPanel.Background = new SolidColorBrush(Color.FromArgb(255,0, 173, 239));
+            RootSampleControlsPanel.Background = new SolidColorBrush(Color.FromArgb(255, 0, 173, 239));
         }
 
         private void StandardBackground_Click(object sender, RoutedEventArgs e)

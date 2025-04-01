@@ -7,8 +7,6 @@ using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Markup;
 using System.Threading;
 using Common;
 
@@ -18,7 +16,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
@@ -30,7 +27,6 @@ using StackLayout = ModernWpf.Controls.StackLayout;
 using FlowLayout = ModernWpf.Controls.FlowLayout;
 using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
 using ItemsRepeaterScrollHost = ModernWpf.Controls.ItemsRepeaterScrollHost;
-using AnimationContext = ModernWpf.Controls.AnimationContext;
 using System.Collections.Generic;
 using static ModernWpf.Controls.ScrollViewerExtensions;
 

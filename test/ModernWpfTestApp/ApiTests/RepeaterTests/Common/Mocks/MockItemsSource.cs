@@ -1,25 +1,21 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using Common;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using ModernWpf.Controls;
-using Common;
 
 #if USING_TAEF
 using WEX.TestExecution;
 using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common.Mocks
 {
-    using ItemsSourceView = ModernWpf.Controls.ItemsSourceView;
     using IKeyIndexMapping = ModernWpf.Controls.IKeyIndexMapping;
 
     public class MockItemsSource : CustomItemsSourceView

@@ -67,8 +67,8 @@ namespace MUXControlsTestApp.Utilities
                 return null;
             }
 
-            return element is T elementAsT 
-                ? elementAsT 
+            return element is T elementAsT
+                ? elementAsT
                 : VisualTreeHelper.GetParent(element).FindVisualParentByType<T>();
         }
     }

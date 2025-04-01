@@ -1,5 +1,4 @@
 ﻿using ModernWpf.Controls;
-using System;
 
 namespace ModernWpf.SampleApp.Common
 {

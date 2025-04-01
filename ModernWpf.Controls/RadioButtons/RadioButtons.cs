@@ -402,7 +402,8 @@ namespace ModernWpf.Controls
                             return itemsSourceView.Count - 1;
                         }
                         return -1;
-                    };
+                    }
+                    ;
                     var index = calculateIndex();
 
                     if (repeater.GetElementIndex(sourceAsUIElement) == index)

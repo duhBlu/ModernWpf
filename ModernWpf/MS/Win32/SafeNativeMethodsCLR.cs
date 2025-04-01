@@ -17,7 +17,7 @@ namespace MS.Win32
 
         internal static void GetWindowRect(HandleRef hWnd, [In, Out] ref NativeMethods.RECT rect)
         {
-            if(!SafeNativeMethodsPrivate.IntGetWindowRect(hWnd, ref rect))
+            if (!SafeNativeMethodsPrivate.IntGetWindowRect(hWnd, ref rect))
             {
                 throw new Win32Exception();
             }
@@ -31,7 +31,7 @@ namespace MS.Win32
             [DllImport(ExternDll.User32, ExactSpelling = true)]
             public static extern IntPtr MonitorFromRect(ref NativeMethods.RECT rect, int flags);
 
-            [DllImport(ExternDll.User32, EntryPoint="ScreenToClient", SetLastError=true, ExactSpelling=true, CharSet=CharSet.Auto)]
+            [DllImport(ExternDll.User32, EntryPoint = "ScreenToClient", SetLastError = true, ExactSpelling = true, CharSet = CharSet.Auto)]
             public static extern int IntScreenToClient(HandleRef hWnd, [In, Out] NativeMethods.POINT pt);
         }
     }

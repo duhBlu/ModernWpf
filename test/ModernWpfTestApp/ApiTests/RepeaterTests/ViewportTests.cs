@@ -9,12 +9,10 @@ using System.Windows.Controls;
 using System.Threading;
 using System.Collections.Generic;
 using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common.Mocks;
-using System.Numerics;
 using Common;
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Windows.Markup;
 using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common;
 
 using Task = System.Threading.Tasks.Task;
@@ -25,14 +23,11 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
 using VirtualizingLayoutContext = ModernWpf.Controls.VirtualizingLayoutContext;
-using LayoutContext = ModernWpf.Controls.LayoutContext;
-using RecyclingElementFactory = ModernWpf.Controls.RecyclingElementFactory;
 using StackLayout = ModernWpf.Controls.StackLayout;
 using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
 using ItemsRepeaterScrollHost = ModernWpf.Controls.ItemsRepeaterScrollHost;
@@ -276,7 +271,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 // - Validate that the recycled element is no longer a candidate for tracking.
                 data[0].RemoveAt(1);
                 Content.UpdateLayout();
-                Verify.AreEqual(string.Join( ", ",
+                Verify.AreEqual(string.Join(", ",
                     new List<string>()
                     {
                         "S2: Unregister Item #0.1",
@@ -394,12 +389,12 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 scrollers[3].IsVerticallyScrollable = true;
                 scrollers[1].IsHorizontallyScrollable = true;
 
-                foreach(var scrollableScroller in new [] { scrollers[1], scrollers[3] })
+                foreach (var scrollableScroller in new[] { scrollers[1], scrollers[3] })
                 {
                     scrollableScroller.RegisterAnchorCandidateFunc = (element) => { Log.Comment("Register {0}", ((FrameworkElement)element).Tag); };
                     scrollableScroller.UnregisterAnchorCandidateFunc = (element) => { Log.Comment("Unregister {0}", ((FrameworkElement)element).Tag); };
                     scrollableScroller.GetRelativeViewportFunc = (element) => { Log.Comment("GetRelativeViewport {0}", ((FrameworkElement)element).Tag); return new Rect(0, 0, outerScroller.Width, outerScroller.Height); };
-                }                
+                }
 
                 var groups = Enumerable.Range(0, data.Count).Select(i =>
                 {
@@ -639,7 +634,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                         {
                             var itemElement = innerRepeater.TryGetElement(itemIndex);
 
-                            if(itemElement != null)
+                            if (itemElement != null)
                             {
                                 actualFirstItemGroupIndex =
                                     actualFirstItemGroupIndex == -1 ?
@@ -815,9 +810,10 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                         ConfigurationChangedAddFunc();
                     }
 
-                    /*return*/ EventRegistrationTokenTable<ConfigurationChangedEventHandler>
-                        .GetOrCreateEventRegistrationTokenTable(ref _configurationChangedTokenTable)
-                        .AddEventHandler(value);
+                    /*return*/
+                    EventRegistrationTokenTable<ConfigurationChangedEventHandler>
+             .GetOrCreateEventRegistrationTokenTable(ref _configurationChangedTokenTable)
+             .AddEventHandler(value);
                 }
                 remove
                 {

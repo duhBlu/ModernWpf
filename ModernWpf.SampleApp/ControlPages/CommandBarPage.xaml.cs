@@ -1,8 +1,6 @@
 ﻿using ModernWpf.Controls;
 using SamplesCommon;
-using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace ModernWpf.SampleApp.ControlPages

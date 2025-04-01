@@ -3,12 +3,8 @@
 
 using System;
 using System.Windows;
-using System.Windows.Controls;
-
-using ItemsSourceView = ModernWpf.Controls.ItemsSourceView;
 using FlowLayout = ModernWpf.Controls.FlowLayout;
 using FlowLayoutAnchorInfo = ModernWpf.Controls.FlowLayoutAnchorInfo;
-using NonVirtualizingLayoutContext = ModernWpf.Controls.NonVirtualizingLayoutContext;
 using VirtualizingLayoutContext = ModernWpf.Controls.VirtualizingLayoutContext;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common

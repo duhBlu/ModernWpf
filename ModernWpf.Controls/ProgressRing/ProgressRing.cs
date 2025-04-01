@@ -127,7 +127,8 @@ namespace ModernWpf.Controls
                 }
 
                 return (0.0, 0.0, 0.0);
-            };
+            }
+            ;
 
             templateSettings.EllipseDiameter = diameterValue;
 

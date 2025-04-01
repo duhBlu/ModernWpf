@@ -4,7 +4,6 @@
 using MUXControlsTestApp.Samples;
 using System;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using FlowLayout = ModernWpf.Controls.FlowLayout;
 using FlowLayoutLineAlignment = ModernWpf.Controls.FlowLayoutLineAlignment;
 using StackLayout = ModernWpf.Controls.StackLayout;

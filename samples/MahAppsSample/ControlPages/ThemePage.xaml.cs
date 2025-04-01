@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace MahAppsSample.ControlPages
+﻿namespace MahAppsSample.ControlPages
 {
     public partial class ThemePage
     {

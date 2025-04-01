@@ -2,12 +2,9 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 #if !USING_TAEF
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
+using System;
 
 namespace Common
 {

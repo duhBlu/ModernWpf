@@ -2,15 +2,13 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using ModernWpf;
-using ModernWpf.Controls;
 using System;
-using System.Windows.Controls;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
-
-using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
 using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
 using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
+using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
 
 namespace MUXControlsTestApp
 {
@@ -22,7 +20,7 @@ namespace MUXControlsTestApp
 
             NavView.CompactPaneLength = 96;
         }
-        
+
         private void CompactPaneLength_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var tag = Convert.ToDouble(((sender as ComboBox).SelectedItem as ComboBoxItem).Tag);
@@ -78,12 +76,12 @@ namespace MUXControlsTestApp
 
             foreach (var item in NavView.MenuItems)
             {
-                if(item as NavigationViewItem == null)
+                if (item as NavigationViewItem == null)
                 {
                     continue;
                 }
                 var transform = GetContentBox(item as NavigationViewItem).TransformToVisual(Window.GetWindow(this)) as MatrixTransform;
-                if(Math.Abs(transform.Matrix.OffsetX - NavView.CompactPaneLength) > double.Epsilon)
+                if (Math.Abs(transform.Matrix.OffsetX - NavView.CompactPaneLength) > double.Epsilon)
                 {
                     allCorrect = false;
                 }
@@ -114,13 +112,13 @@ namespace MUXControlsTestApp
         /* Helper functions */
         private UIElement GetContentBox(NavigationViewItem element)
         {
-            if(element == null)
+            if (element == null)
             {
                 return null;
             }
             // Path we are using here: NVIGrid->NavigationViewItemPresenter->LayoutRoot
             // ->PresenterContentRootGrid->ContentGrid->ContentPresenter
-            var elementGrid = VisualTreeHelper.GetChild(element,0);
+            var elementGrid = VisualTreeHelper.GetChild(element, 0);
             var presenter = VisualTreeHelper.GetChild(elementGrid, 0);
             var layoutRoot = VisualTreeHelper.GetChild(presenter, 0);
             var presenterContentRootGrid = layoutRoot.FindDescendantByName("PresenterContentRootGrid");

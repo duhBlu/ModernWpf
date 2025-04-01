@@ -3,7 +3,6 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Controls;
 
 namespace MUXControlsTestApp.Samples
 {

@@ -3,8 +3,8 @@
 
 using System.Windows.Automation.Peers;
 using System.Windows.Automation.Provider;
-using ProgressBar = ModernWpf.Controls.ProgressBar;
 using static ModernWpf.ResourceAccessor;
+using ProgressBar = ModernWpf.Controls.ProgressBar;
 
 namespace ModernWpf.Automation.Peers
 {

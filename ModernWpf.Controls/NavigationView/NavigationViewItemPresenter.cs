@@ -7,7 +7,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using ModernWpf.Input;
 using static CppWinRTHelpers;
-using static ModernWpf.Controls.NavigationViewItemHelper;
 
 namespace ModernWpf.Controls.Primitives
 {

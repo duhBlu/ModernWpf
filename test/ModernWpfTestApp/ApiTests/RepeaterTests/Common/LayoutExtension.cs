@@ -2,12 +2,10 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
-using System.Windows.Controls;
-
-using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
+using FlowLayout = ModernWpf.Controls.FlowLayout;
 using StackLayout = ModernWpf.Controls.StackLayout;
 using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
-using FlowLayout = ModernWpf.Controls.FlowLayout;
+using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
 {

@@ -7,12 +7,11 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-
-using RecyclePool = ModernWpf.Controls.RecyclePool;
-using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
 using ElementFactory = ModernWpf.Controls.ElementFactory;
 using ElementFactoryGetArgs = ModernWpf.Controls.ElementFactoryGetArgs;
 using ElementFactoryRecycleArgs = ModernWpf.Controls.ElementFactoryRecycleArgs;
+using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
+using RecyclePool = ModernWpf.Controls.RecyclePool;
 using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
 
 namespace MUXControlsTestApp.Samples

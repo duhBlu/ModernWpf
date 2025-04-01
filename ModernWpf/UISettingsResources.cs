@@ -1,7 +1,7 @@
-﻿using System.Runtime.CompilerServices;
+﻿using Microsoft.Win32;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Threading;
-using Microsoft.Win32;
 
 #if NET5_0_OR_NEWER
 using Windows.Foundation.Metadata; // For ApiInformation checks

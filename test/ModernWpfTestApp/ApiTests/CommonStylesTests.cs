@@ -3,21 +3,11 @@
 
 using Common;
 using MUXControlsTestApp.Utilities;
-using System.Linq;
-using System.Threading;
-using Windows.System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Input;
-using System.Windows.Media;
-using PlatformConfiguration = Common.PlatformConfiguration;
-using OSVersion = Common.OSVersion;
 using System.Collections.Generic;
 using XamlControlsResources = ModernWpf.Controls.XamlControlsResources;
 using System.Windows.Markup;
-using System;
-using ModernWpf.Controls;
 using System.Text;
 using System.Collections;
 
@@ -27,7 +17,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 namespace ModernWpf.Tests.MUXControls.ApiTests

@@ -125,7 +125,8 @@ namespace ModernWpf.Controls.Primitives
                         }
                     }
                     return new Size(largestChildWidth, largestChildHeight);
-                };
+                }
+                ;
                 m_largestChildSize = calculateLargestChildSize();
 
                 m_actualColumnCount = CalculateColumns(children.Count, m_largestChildSize.Width, availableSize.Width);

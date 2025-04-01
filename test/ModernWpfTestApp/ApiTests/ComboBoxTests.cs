@@ -4,7 +4,6 @@
 using Common;
 using MUXControlsTestApp.Utilities;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Linq;
 using MUXControlsTestApp;
 using System.Windows;
@@ -15,7 +14,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 namespace ModernWpf.Tests.MUXControls.ApiTests
@@ -54,7 +52,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
                     overlayCornerRadius = (CornerRadius)radius;
                 }
                 var popup = VisualTreeHelperEx.GetOpenPopups(WindowEx.Current).Last();
-                var popupBorder = TestUtilities.FindDescendents<Border>(popup).Where(e => e.Name=="PopupBorder").Single();
+                var popupBorder = TestUtilities.FindDescendents<Border>(popup).Where(e => e.Name == "PopupBorder").Single();
                 Verify.AreEqual(new CornerRadius(0, 0, overlayCornerRadius.BottomRight, overlayCornerRadius.BottomLeft) /*overlayCornerRadius*/, popupBorder.CornerRadius);
             });
         }
@@ -129,7 +127,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
                     Content.UpdateLayout();
                 }
             });
-            if(!useContent)
+            if (!useContent)
             {
                 TestUtilities.SetAsVisualTreeRoot(comboBox);
             }

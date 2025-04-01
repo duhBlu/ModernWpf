@@ -7,8 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using System.Collections.ObjectModel;
-using System.Text;
-using ModernWpf.Controls;
 using Common;
 
 #if USING_TAEF
@@ -17,7 +15,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using SelectionModel = ModernWpf.Controls.SelectionModel;
@@ -77,7 +74,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
 
                 bool select = true;
                 int selectionChangedFiredCount = 0;
-                selectionModel.SelectionChanged += delegate (SelectionModel sender, SelectionModelSelectionChangedEventArgs args) {
+                selectionModel.SelectionChanged += delegate (SelectionModel sender, SelectionModelSelectionChangedEventArgs args)
+                {
                     selectionChangedFiredCount++;
 
                     // Verify SelectionChanged was raised after selection state was changed in the SelectionModel
@@ -109,7 +107,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.Source = Enumerable.Range(0, 10).ToList();
 
                 int selectionChangedFiredCount = 0;
-                selectionModel.SelectionChanged += delegate (SelectionModel sender, SelectionModelSelectionChangedEventArgs args) 
+                selectionModel.SelectionChanged += delegate (SelectionModel sender, SelectionModelSelectionChangedEventArgs args)
                 {
                     selectionChangedFiredCount++;
 
@@ -1031,7 +1029,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
             {
                 var list = Enumerable.Range(0, 10).ToList();
 
-                var selectionModel = new SelectionModel() {
+                var selectionModel = new SelectionModel()
+                {
                     Source = list,
                     SingleSelect = true
                 };
@@ -1041,7 +1040,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.SelectionChanged += ThrowIfRaisedSelectionChanged;
                 selectionModel.Select(0);
 
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list,
                     SingleSelect = true
                 };
@@ -1052,7 +1052,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.SelectAt(IndexPath.CreateFrom(1));
 
                 // multi select index
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list
                 };
                 selectionModel.Select(1);
@@ -1062,7 +1063,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.Select(1);
                 selectionModel.Select(2);
 
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list
                 };
 
@@ -1090,7 +1092,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
             {
                 var list = Enumerable.Range(0, 10).ToList();
 
-                var selectionModel = new SelectionModel() {
+                var selectionModel = new SelectionModel()
+                {
                     Source = list,
                     SingleSelect = true
                 };
@@ -1099,7 +1102,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.SelectionChanged += ThrowIfRaisedSelectionChanged;
                 selectionModel.Deselect(0);
 
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list,
                     SingleSelect = true
                 };
@@ -1109,7 +1113,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.DeselectAt(IndexPath.CreateFrom(1));
 
                 // multi select index
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list
                 };
                 testName = "Deselect(int32 index), multiselect";
@@ -1117,7 +1122,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 selectionModel.Deselect(1);
                 selectionModel.Deselect(2);
 
-                selectionModel = new SelectionModel() {
+                selectionModel = new SelectionModel()
+                {
                     Source = list
                 };
 
@@ -1134,7 +1140,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
             }
         }
 
-        [TestMethod] 
+        [TestMethod]
         public void ValidateSelectionModeChangeFromMultipleToSingle()
         {
             RunOnUIThread.Execute(() =>

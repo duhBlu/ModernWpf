@@ -12,12 +12,12 @@ namespace MS.Internal
         internal static Rect ToRect(NativeMethods.RECT rc)
         {
             Rect rect = new Rect();
- 
-            rect.X      = rc.left;
-            rect.Y      = rc.top;
-            rect.Width  = rc.right  - rc.left;
+
+            rect.X = rc.left;
+            rect.Y = rc.top;
+            rect.Width = rc.right - rc.left;
             rect.Height = rc.bottom - rc.top;
- 
+
             return rect;
         }
     }

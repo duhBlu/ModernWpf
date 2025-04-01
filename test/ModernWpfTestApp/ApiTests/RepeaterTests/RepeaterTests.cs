@@ -14,7 +14,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
@@ -32,7 +31,6 @@ using System.Windows.Markup;
 using ModernWpf.Controls;
 using System.Windows.Media;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
 {
@@ -431,7 +429,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 for (int i = 0; i < 100; i++)
                 {
                     itemsSource.Add(new ObservableCollection<int>(Enumerable.Range(0, 5)));
-                };
+                }
+                ;
 
                 rootRepeater.ItemsSource = itemsSource;
                 Content = anchorProvider;

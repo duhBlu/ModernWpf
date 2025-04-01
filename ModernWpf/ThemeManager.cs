@@ -852,12 +852,12 @@ namespace ModernWpf
 
             public event PropertyChangedEventHandler PropertyChanged;
 
-            private void RaisePropertyChanged([CallerMemberName]string propertyName = null)
+            private void RaisePropertyChanged([CallerMemberName] string propertyName = null)
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
 
-            private void Set<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
+            private void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
             {
                 if (!Equals(storage, value))
                 {

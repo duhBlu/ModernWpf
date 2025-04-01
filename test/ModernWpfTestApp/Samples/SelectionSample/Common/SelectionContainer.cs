@@ -26,13 +26,13 @@ namespace MUXControlsTestApp.Samples.Selection
 
         private static void OnSelectionModelChanged(DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
-            if(args.OldValue != null)
+            if (args.OldValue != null)
             {
                 var old = (SelectionModel)args.OldValue;
                 old.SelectionChanged -= (sender as SelectionContainer).OnSelectionChanged;
             }
 
-            if(args.NewValue != null)
+            if (args.NewValue != null)
             {
                 var newValue = (SelectionModel)args.NewValue;
                 newValue.SelectionChanged += (sender as SelectionContainer).OnSelectionChanged;
@@ -41,7 +41,7 @@ namespace MUXControlsTestApp.Samples.Selection
 
         private void OnSelectionChanged(SelectionModel sender, SelectionModelSelectionChangedEventArgs args)
         {
-            if(AutomationPeer.ListenerExists(AutomationEvents.SelectionPatternOnInvalidated))
+            if (AutomationPeer.ListenerExists(AutomationEvents.SelectionPatternOnInvalidated))
             {
                 var peer = (SelectionContainerAutomationPeer)FrameworkElementAutomationPeer.CreatePeerForElement(this);
                 peer.SelectionChanged(args);

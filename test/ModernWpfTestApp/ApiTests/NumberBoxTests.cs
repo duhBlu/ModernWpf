@@ -6,7 +6,6 @@ using MUXControlsTestApp.Utilities;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Linq;
-using System.Collections.Generic;
 using MUXControlsTestApp;
 using ModernWpf.Controls;
 using System.Windows.Controls.Primitives;
@@ -21,7 +20,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 namespace ModernWpf.Tests.MUXControls.ApiTests

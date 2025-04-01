@@ -16,7 +16,7 @@ namespace MUXControlsTestApp
         // See https://github.com/microsoft/microsoft-ui-xaml/issues/2941 for context
         private void NavigationView_ItemInvoked(ModernWpf.Controls.NavigationView sender, ModernWpf.Controls.NavigationViewItemInvokedEventArgs args)
         {
-            if((args.InvokedItem as string) == "Apps")
+            if ((args.InvokedItem as string) == "Apps")
             {
                 CollapsedItem.Visibility = Visibility.Visible;
 

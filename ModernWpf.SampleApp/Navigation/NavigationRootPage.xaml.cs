@@ -348,7 +348,7 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(ThemeResourcesPage), "Theme Resources");
             AddPage(typeof(CompactSizingPage), "Compact Sizing");
             AddPage(typeof(PageTransitionPage), "Page Transitions");
-            AddPage(typeof(ThreadedUIPage), "Threaded UI");
+            //AddPage(typeof(ThreadedUIPage), "Threaded UI");
             AddPage(typeof(AppBarButtonPage));
             AddPage(typeof(AppBarSeparatorPage));
             AddPage(typeof(AppBarToggleButtonPage));
@@ -381,6 +381,11 @@ namespace ModernWpf.SampleApp
             AddPage(typeof(PersonPicturePage));
             AddPage(typeof(PopupPlacementPage));
             AddPage(typeof(ProgressPage), "Progress Controls");
+
+#if EXTENDED_WPF_TOOLKIT_27_SUPPORTED
+            AddPage(typeof(PropertyGridPage));
+#endif
+
             AddPage(typeof(RadioButtonsPage));
             AddPage(typeof(RatingControlPage));
             AddPage(typeof(RichTextBoxPage));

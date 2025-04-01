@@ -8,8 +8,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;
-using System.Windows.Threading;
-using SamplesCommon;
 using Separator = ModernWpf.SampleApp.Common.Separator;
 using VirtualKey = System.Windows.Input.Key;
 

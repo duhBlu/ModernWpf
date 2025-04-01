@@ -1,19 +1,17 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using ModernWpf.Controls;
+using MUXControlsTestApp.Utilities;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using ModernWpf.Controls;
-
-using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
 using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
-using NavigationViewItemExpandingEventArgs = ModernWpf.Controls.NavigationViewItemExpandingEventArgs;
 using NavigationViewItemCollapsedEventArgs = ModernWpf.Controls.NavigationViewItemCollapsedEventArgs;
+using NavigationViewItemExpandingEventArgs = ModernWpf.Controls.NavigationViewItemExpandingEventArgs;
+using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
 using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
-using MUXControlsTestApp.Utilities;
 
 namespace MUXControlsTestApp
 {
@@ -46,7 +44,7 @@ namespace MUXControlsTestApp
         private void CollapseSelectedItem(object sender, RoutedEventArgs e)
         {
             var selectedItem = navview.SelectedItem;
-            if(selectedItem != null)
+            if (selectedItem != null)
             {
                 var container = (NavigationViewItem)navview.ContainerFromMenuItem(selectedItem);
                 container.IsExpanded = false;
@@ -62,7 +60,7 @@ namespace MUXControlsTestApp
         {
             string itemstring = "";
             itemstring = BuildIsChildSelectedString(navview.MenuItems, itemstring);
-            if(itemstring == "")
+            if (itemstring == "")
             {
                 itemstring = "None";
             }

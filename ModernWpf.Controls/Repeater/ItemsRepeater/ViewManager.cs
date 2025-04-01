@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Markup;
 
@@ -39,7 +38,8 @@ namespace ModernWpf.Controls
                     }
                 }
             }
-            if (element == null) { element = GetElementFromUniqueIdResetPool(index); };
+            if (element == null) { element = GetElementFromUniqueIdResetPool(index); }
+            ;
             if (element == null) { element = GetElementFromPinnedElements(index); }
             if (element == null) { element = GetElementFromElementFactory(index); }
 

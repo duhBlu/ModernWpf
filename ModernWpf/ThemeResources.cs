@@ -245,9 +245,12 @@ namespace ModernWpf
             get
             {
                 int count = 0;
-                if (IsMerged(_lightResources)) { count++; };
-                if (IsMerged(_darkResources)) { count++; };
-                if (IsMerged(_highContrastResources)) { count++; };
+                if (IsMerged(_lightResources)) { count++; }
+                ;
+                if (IsMerged(_darkResources)) { count++; }
+                ;
+                if (IsMerged(_highContrastResources)) { count++; }
+                ;
                 return count;
             }
         }

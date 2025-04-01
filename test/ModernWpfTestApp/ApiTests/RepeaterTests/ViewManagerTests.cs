@@ -23,13 +23,11 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
 using ItemsSourceView = ModernWpf.Controls.InspectingDataSource;
-using ElementFactory = ModernWpf.Controls.ElementFactory;
 using VirtualizingLayoutContext = ModernWpf.Controls.VirtualizingLayoutContext;
 using RecyclingElementFactory = ModernWpf.Controls.RecyclingElementFactory;
 using RecyclePool = ModernWpf.Controls.RecyclePool;
@@ -775,12 +773,15 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
             Log.Comment("Initialize ItemsRepeater");
             RunOnUIThread.Execute(() =>
             {
-                elementFactory = new MockElementFactory() {
-                    GetElementFunc = delegate (int index, UIElement owner) {
+                elementFactory = new MockElementFactory()
+                {
+                    GetElementFunc = delegate (int index, UIElement owner)
+                    {
                         return new Button() { Content = index };
-                           },
+                    },
 
-                    ClearElementFunc = delegate (UIElement element, UIElement owner) {
+                    ClearElementFunc = delegate (UIElement element, UIElement owner)
+                    {
                         elementClearingRaisedCount++;
                         Verify.IsNull((element as FrameworkElement).DataContext);
                     }

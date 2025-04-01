@@ -3,7 +3,6 @@ using ModernWpf.Controls.Primitives;
 using SamplesCommon.SamplePages;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using Frame = ModernWpf.Controls.Frame;
 
 namespace ModernWpf.SampleApp.ControlPages

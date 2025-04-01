@@ -75,7 +75,7 @@ namespace MUXControlsTestApp
             }
         }
 
-        private void ToggleThemeButton_Click(object sender,RoutedEventArgs e)
+        private void ToggleThemeButton_Click(object sender, RoutedEventArgs e)
         {
             var tm = ThemeManager.Current;
             if (tm.ApplicationTheme == null)

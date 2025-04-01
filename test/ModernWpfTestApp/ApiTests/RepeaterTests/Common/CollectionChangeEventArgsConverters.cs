@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using Windows.Foundation.Collections;
-using ModernWpf.Controls;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
 {
@@ -96,7 +95,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
                         }
                         newArgs = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Move, movedItems, newStartingIndex, oldStartingIndex);
                     }
-                  break;
+                    break;
                 case NotifyCollectionChangedAction.Reset:
                     newArgs = new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset);
                     break;

@@ -3,12 +3,10 @@
 
 using System;
 using System.Collections.Generic;
-using ModernWpf.Controls;
 using System.Collections.Specialized;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
 {
-    using ItemsSourceView = ModernWpf.Controls.ItemsSourceView;
     using IKeyIndexMapping = ModernWpf.Controls.IKeyIndexMapping;
 
     class CustomItemsSource : CustomItemsSourceView

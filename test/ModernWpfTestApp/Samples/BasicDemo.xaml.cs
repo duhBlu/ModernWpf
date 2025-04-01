@@ -7,7 +7,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Navigation;
 
 namespace MUXControlsTestApp.Samples
 {
@@ -28,7 +27,7 @@ namespace MUXControlsTestApp.Samples
         private void OnAddRecipeButton_Click(object sender, RoutedEventArgs e)
         {
             InsertAtStartChildCountLabel.Text = VisualTreeHelper.GetChildrenCount(insertStartTestRepeater).ToString();
-            simpleStringsList.Insert(0,"Item" + simpleStringsList.Count );
+            simpleStringsList.Insert(0, "Item" + simpleStringsList.Count);
         }
 
         private void OnSelectTemplateKey(RecyclingElementFactory sender, SelectTemplateEventArgs args)

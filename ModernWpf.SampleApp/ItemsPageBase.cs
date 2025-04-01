@@ -7,15 +7,10 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
-using ModernWpf.Controls;
-using SamplesCommon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Windows.Controls;
-using GridView = ModernWpf.Controls.GridView;
 using Page = ModernWpf.Controls.Page;
 
 namespace ModernWpf.SampleApp

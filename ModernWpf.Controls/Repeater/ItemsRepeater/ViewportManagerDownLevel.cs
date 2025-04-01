@@ -403,7 +403,7 @@ namespace ModernWpf.Controls
                     m_verticalScroller.GetRelativeViewport(m_owner)) :
                 new Rect();
             var currentVisibleWindow =
-                HasScrollers?
+                HasScrollers ?
                 new Rect
                 (
                     m_horizontalScroller != null ? horizontalVisibleWindow.X : verticalVisibleWindow.X,

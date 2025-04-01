@@ -2,7 +2,6 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
-using System.Reflection;
 using System.Threading;
 using System.Windows.Automation;
 using System.Windows.Controls;
@@ -17,7 +16,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using PersonPicture = ModernWpf.Controls.PersonPicture;
@@ -122,7 +120,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
                 Verify.AreEqual(automationName, "John Doe, 5 direct reports");
             });
         }
-        
+
         [TestMethod]
         public void VerifySmallWidthAndHeightDoNotCrash()
         {

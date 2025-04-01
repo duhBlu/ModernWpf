@@ -1,5 +1,4 @@
 ﻿using ModernWpf.Controls;
-using SamplesCommon;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

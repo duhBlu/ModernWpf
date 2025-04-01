@@ -2,24 +2,19 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 
-using System.Windows.Controls;
-using System.Windows;
-using System.Collections.ObjectModel;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Text;
+using ModernWpf;
+using ModernWpf.Media.Animation;
 using System;
-
-using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
+using System.Windows;
+using System.Windows.Controls;
 using NavigationView = ModernWpf.Controls.NavigationView;
+using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
 using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
 using NavigationViewItemHeader = ModernWpf.Controls.NavigationViewItemHeader;
 using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
 using NavigationViewOverflowLabelMode = ModernWpf.Controls.NavigationViewOverflowLabelMode;
-using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
-using ModernWpf.Media.Animation;
-using ModernWpf;
+using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
+using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
 
 namespace MUXControlsTestApp
 {
@@ -94,8 +89,8 @@ namespace MUXControlsTestApp
                 {
                     return "container's content should be null but it is " + container.Content.ToString();
                 }
-                
-                return container.Tag != null ? container.Tag.ToString(): "container should have tag property since content is null";
+
+                return container.Tag != null ? container.Tag.ToString() : "container should have tag property since content is null";
             }
 
             var contentString = content.ToString();
@@ -190,13 +185,13 @@ namespace MUXControlsTestApp
         {
             NavView.InvalidateMeasure();
         }
-        
+
         private void ClearNavItemContent_Click(object sender, RoutedEventArgs e)
         {
-            for (int i= NavView.MenuItems.Count-1; i>=0; i--)
+            for (int i = NavView.MenuItems.Count - 1; i >= 0; i--)
             {
                 var item = NavView.MenuItems[i];
-                var container = item  as NavigationViewItem;
+                var container = item as NavigationViewItem;
                 if (container != null)
                 {
                     container.Content = null;
@@ -213,7 +208,7 @@ namespace MUXControlsTestApp
         private void AddLongNavItem_Click(object sender, RoutedEventArgs e)
         {
             var content = "Bill".PadRight(100, '.') + "Gates";
-            NavView.MenuItems.Add(new NavigationViewItem(){ Content = content });
+            NavView.MenuItems.Add(new NavigationViewItem() { Content = content });
         }
 
         private void AddTenItems_Click(object sender, RoutedEventArgs e)

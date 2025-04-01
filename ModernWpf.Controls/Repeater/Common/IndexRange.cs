@@ -80,7 +80,8 @@ namespace ModernWpf.Controls
                 hash = hash * 31 + m_begin.GetHashCode();
                 hash = hash * 31 + m_end.GetHashCode();
                 return hash;
-            };
+            }
+            ;
         }
 
         public static bool operator ==(IndexRange lhs, IndexRange rhs)

@@ -3,7 +3,6 @@
 
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Threading;
 
 namespace ModernWpf.Controls.Primitives
 {
@@ -154,7 +153,7 @@ namespace ModernWpf.Controls.Primitives
             {
                 if (GetTemplateChild<TextBox>(c_editableTextName, comboBox) is TextBox textBox)
                 {
-                    var popupTop = popupBorder.TranslatePoint(new Point(0,0), textBox);
+                    var popupTop = popupBorder.TranslatePoint(new Point(0, 0), textBox);
                     verticalOffset = popupTop.Y;
                 }
             }

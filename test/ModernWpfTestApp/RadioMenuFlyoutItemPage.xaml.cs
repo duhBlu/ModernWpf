@@ -3,9 +3,7 @@
 
 using ModernWpf.Controls;
 using MUXControlsTestApp.Utilities;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;

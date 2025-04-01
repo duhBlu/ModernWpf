@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using ModernWpf.Media.Utils;
 using System;
 using System.Collections.Generic;
 using System.Windows.Media;
-using ModernWpf.Media.Utils;
 
 namespace ModernWpf.Media.ColorPalette
 {

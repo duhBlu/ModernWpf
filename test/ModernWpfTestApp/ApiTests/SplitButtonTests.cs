@@ -15,7 +15,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using SplitButton = ModernWpf.Controls.SplitButton;
@@ -97,7 +96,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
             return true;
         }
 
-        public void Execute(object o) {}
+        public void Execute(object o) { }
     }
-    #pragma warning restore CS0067
+#pragma warning restore CS0067
 }

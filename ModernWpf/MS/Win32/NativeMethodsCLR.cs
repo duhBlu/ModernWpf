@@ -17,19 +17,23 @@ namespace MS.Win32
         SWP_DRAWFRAME = 0x0020;
 
         [StructLayout(LayoutKind.Sequential)]
-        public class POINT {
+        public class POINT
+        {
             public int x;
             public int y;
- 
-            public POINT() {
+
+            public POINT()
+            {
             }
- 
-            public POINT(int x, int y) {
+
+            public POINT(int x, int y)
+            {
                 this.x = x;
                 this.y = y;
             }
 #if DEBUG
-            public override string ToString() {
+            public override string ToString()
+            {
                 return "{x=" + x + ", y=" + y + "}";
             }
 #endif

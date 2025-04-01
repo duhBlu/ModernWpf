@@ -21,9 +21,9 @@ namespace ModernWpf.Controls
             m_value = value;
             Reason = reason;
         }
-        
+
         public AutoSuggestionBoxTextChangeReason Reason { get; }
-        
+
         public bool CheckCurrent()
         {
             return m_source != null &&

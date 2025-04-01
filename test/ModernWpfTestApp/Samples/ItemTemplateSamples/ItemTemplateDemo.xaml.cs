@@ -3,7 +3,6 @@
 
 using ModernWpf.Controls;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,7 +18,7 @@ namespace MUXControlsTestApp.Samples
         {
             Data = Enumerable.Range(0, 1000).ToList();
 
-            for(int i=0;i<10;i++)
+            for (int i = 0; i < 10; i++)
             {
                 Numbers.Add(new MyData(i));
             }

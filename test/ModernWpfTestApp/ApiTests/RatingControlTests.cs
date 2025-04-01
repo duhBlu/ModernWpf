@@ -2,15 +2,10 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using MUXControlsTestApp.Utilities;
 
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Common;
 
@@ -20,11 +15,9 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using RatingControl = ModernWpf.Controls.RatingControl;
-using RatingItemFontInfo = ModernWpf.Controls.RatingItemFontInfo;
 using RatingItemImageInfo = ModernWpf.Controls.RatingItemImageInfo;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests

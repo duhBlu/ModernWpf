@@ -85,7 +85,7 @@ namespace MUXControlsTestApp.Samples.Selection
                 }
                 else if (!SelectionModel.SingleSelect)
                 {
-                    
+
                     var isShiftPressed = Keyboard.Modifiers.HasFlag(ModifierKeys.Shift);
                     var isCtrlPressed = Keyboard.Modifiers.HasFlag(ModifierKeys.Control);
                     if (e.Key == Key.A && isCtrlPressed)

@@ -1,29 +1,28 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using ModernWpf;
+using ModernWpf.Controls;
+using MUXControlsTestApp.Utilities;
 using System;
 using System.Windows;
+using System.Windows.Automation;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Navigation;
-using System.Windows.Automation;
-
-using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
 using NavigationView = ModernWpf.Controls.NavigationView;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
-using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
-using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
-using NavigationViewDisplayModeChangedEventArgs = ModernWpf.Controls.NavigationViewDisplayModeChangedEventArgs;
-using NavigationViewPaneClosingEventArgs = ModernWpf.Controls.NavigationViewPaneClosingEventArgs;
 using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
 using NavigationViewBackRequestedEventArgs = ModernWpf.Controls.NavigationViewBackRequestedEventArgs;
+using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
+using NavigationViewDisplayModeChangedEventArgs = ModernWpf.Controls.NavigationViewDisplayModeChangedEventArgs;
+using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
+using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
+using NavigationViewPaneClosingEventArgs = ModernWpf.Controls.NavigationViewPaneClosingEventArgs;
 using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
+using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
 //using MaterialHelperTestApi = Microsoft.UI.Private.Media.MaterialHelperTestApi;
 using NavigationViewSelectionFollowsFocus = ModernWpf.Controls.NavigationViewSelectionFollowsFocus;
-using ModernWpf.Controls;
-using MUXControlsTestApp.Utilities;
-using ModernWpf;
 
 namespace MUXControlsTestApp
 {
@@ -387,7 +386,7 @@ namespace MUXControlsTestApp
             var text = args.InvokedItem as string;
             if (curSelected != null && (string)curSelected.Content == text)
             {
-                if(InvokedItemState.Text == "ItemWasSelectedInItemInvoked")
+                if (InvokedItemState.Text == "ItemWasSelectedInItemInvoked")
                 {
                     InvokedItemState.Text = "ItemWasInvokedSecomdTimeWithCorrectSelection";
                 }
@@ -395,7 +394,7 @@ namespace MUXControlsTestApp
                 {
                     InvokedItemState.Text = "ItemWasSelectedInItemInvoked";
                 }
-            } 
+            }
             else
             {
                 InvokedItemState.Text = "Error:ItemUnselectedInItemInvoked";
@@ -421,7 +420,7 @@ namespace MUXControlsTestApp
                     {
                         NavView.Header = itemdata.Content + " as header";
                     }
-                    else if(args.IsSettingsSelected) // to handle settings without content case in top nav
+                    else if (args.IsSettingsSelected) // to handle settings without content case in top nav
                     {
                         NavView.Header = "Settings as header";
                     }
@@ -434,7 +433,7 @@ namespace MUXControlsTestApp
             }
         }
 
-        private void ClearSelectionChangeBlock(object sender,RoutedEventArgs e)
+        private void ClearSelectionChangeBlock(object sender, RoutedEventArgs e)
         {
             SelectionChangedRaised.Text = "False";
         }
@@ -687,14 +686,14 @@ namespace MUXControlsTestApp
                 if (control != null)
                 {
                     margin = control.Margin.ToString();
-                }                
+                }
             }
             HeaderContentMarginResult.Text = margin;
         }
 
         private void GetNavViewActiveVisualStates_Click(object sender, RoutedEventArgs e)
         {
-            var visualstates = Utilities.VisualStateHelper.GetCurrentVisualStateName(NavView);           
+            var visualstates = Utilities.VisualStateHelper.GetCurrentVisualStateName(NavView);
             NavViewActiveVisualStatesResult.Text = string.Join(",", visualstates);
         }
 
@@ -731,7 +730,7 @@ namespace MUXControlsTestApp
         }
 
         private void GetTopLevelNavViewItemContentPresenterMarginButton_Click(object sender, RoutedEventArgs e)
-        {         
+        {
             if (FindVisualChildByName(HasChildItem, "ContentPresenter") is ContentPresenter presenter)
             {
                 NavViewItemContentPresenterMarginTextBlock.Text = presenter.Margin.ToString();

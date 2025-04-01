@@ -6,7 +6,6 @@ using ModernWpf.Controls.Primitives;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
-using System.Windows.Automation;
 using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -46,7 +45,7 @@ namespace MUXControlsTestApp.Samples.Selection
             if (SelectionModel != null)
             {
                 var indexPath = GetIndexPath();
-                if(select)
+                if (select)
                 {
                     SelectionModel.SelectAt(indexPath);
                 }
@@ -119,7 +118,7 @@ namespace MUXControlsTestApp.Samples.Selection
                     }
                     else if (isCtrlPressed && e.Key == Key.Space)
                     {
-                        if(SelectionModel.IsSelectedAt(indexPath).Value)
+                        if (SelectionModel.IsSelectedAt(indexPath).Value)
                         {
                             SelectionModel.DeselectAt(indexPath);
                         }
@@ -149,7 +148,7 @@ namespace MUXControlsTestApp.Samples.Selection
                 {
                     if (Keyboard.Modifiers.HasFlag(ModifierKeys.Shift) && !SelectionModel.SingleSelect)
                     {
-                        if(Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
+                        if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
                         {
                             SelectionModel.DeselectRangeFromAnchorTo(GetIndexPath());
                         }
@@ -161,7 +160,7 @@ namespace MUXControlsTestApp.Samples.Selection
                     else if (Keyboard.Modifiers.HasFlag(ModifierKeys.Control))
                     {
                         var path = GetIndexPath();
-                        if(SelectionModel.IsSelectedAt(path).Value)
+                        if (SelectionModel.IsSelectedAt(path).Value)
                         {
                             SelectionModel.SelectAt(path);
                         }

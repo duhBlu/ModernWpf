@@ -2,15 +2,11 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using ModernWpf;
-using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Automation.Peers;
-using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Navigation;
-using Frame = ModernWpf.Controls.Frame;
 using Page = ModernWpf.Controls.Page;
 
 namespace MUXControlsTestApp

@@ -30,6 +30,12 @@
     <DefineConstants>$(DefineConstants);NET5_0_OR_NEWER</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework' and 
+  $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '4.6.2')) and 
+  !$([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '4.8.1'))">
+    <DefineConstants>$(DefineConstants);EXTENDED_WPF_TOOLKIT_27_SUPPORTED</DefineConstants>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(SupportedOSPlatform)' != '' and $([MSBuild]::VersionGreaterThan($(SupportedOSPlatform), '7.0'))">
     <SupportedOSPlatform>7.0</SupportedOSPlatform>
   </PropertyGroup>

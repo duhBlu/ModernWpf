@@ -1,0 +1,17 @@
+
+
+# Add Xceed's Property Grid
+	- Style it for 'Modern' wpf
+		- Compact/standard
+		- Dynamic CornerRadius
+		- Get the images working, commented out for now, the app cant find the resources at runtime for some reason / or replace with geometry paths
+	- Add a style Page for it
+		- Add the rest of the features
+
+# Add Xceed's Avalon Dock
+	- Metro + Aero
+		- Style it for 'Modern' wpf
+			- Compact/standard
+			- Dynamic CornerRadius
+			- Ensure images show up / or replace with geomerty paths
+		- Add a Sample Page for it

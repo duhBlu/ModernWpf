@@ -58,7 +58,8 @@ namespace ModernWpf
                     {
                         UpdateBrushes();
                     }
-                };
+                }
+                ;
             }
         }
 
@@ -348,7 +349,7 @@ namespace ModernWpf
             set => Set(ref _listMedium, value);
         }
 
-        private bool Set(ref Color? storage, Color? value, bool updateBrushes = true, [CallerMemberName]string propertyName = null)
+        private bool Set(ref Color? storage, Color? value, bool updateBrushes = true, [CallerMemberName] string propertyName = null)
         {
             if (storage != value)
             {

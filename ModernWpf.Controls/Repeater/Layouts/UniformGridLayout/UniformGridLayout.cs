@@ -417,8 +417,8 @@ namespace ModernWpf.Controls
             var minItemSpacing = MinItemSpacing;
             var gridState = GetAsGridState(context.LayoutState);
             return OM.ScrollOrientation == ScrollOrientation.Vertical ?
-                (gridState.EffectiveItemWidth+ minItemSpacing) :
-                (gridState.EffectiveItemHeight+ minItemSpacing);
+                (gridState.EffectiveItemWidth + minItemSpacing) :
+                (gridState.EffectiveItemHeight + minItemSpacing);
         }
 
         private double GetMajorSizeWithSpacing(VirtualizingLayoutContext context)
@@ -426,8 +426,8 @@ namespace ModernWpf.Controls
             var lineSpacing = LineSpacing;
             var gridState = GetAsGridState(context.LayoutState);
             return OM.ScrollOrientation == ScrollOrientation.Vertical ?
-                (gridState.EffectiveItemHeight+ lineSpacing) :
-                (gridState.EffectiveItemWidth+ lineSpacing);
+                (gridState.EffectiveItemHeight + lineSpacing) :
+                (gridState.EffectiveItemWidth + lineSpacing);
 
         }
 
@@ -447,8 +447,8 @@ namespace ModernWpf.Controls
             Rect bounds = OM.MinorMajorRect(
                 indexInRow * GetMinorSizeWithSpacing(context) + OM.MinorStart(lastExtent),
                 rowIndex * GetMajorSizeWithSpacing(context) + OM.MajorStart(lastExtent),
-                OM.ScrollOrientation == ScrollOrientation.Vertical ? gridState.EffectiveItemWidth: gridState.EffectiveItemHeight,
-                OM.ScrollOrientation == ScrollOrientation.Vertical ? gridState.EffectiveItemHeight: gridState.EffectiveItemWidth);
+                OM.ScrollOrientation == ScrollOrientation.Vertical ? gridState.EffectiveItemWidth : gridState.EffectiveItemHeight,
+                OM.ScrollOrientation == ScrollOrientation.Vertical ? gridState.EffectiveItemHeight : gridState.EffectiveItemWidth);
 
             return bounds;
         }

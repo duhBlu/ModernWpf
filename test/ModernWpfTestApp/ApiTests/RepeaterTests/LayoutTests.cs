@@ -4,11 +4,7 @@
 using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common;
 using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common.Mocks;
 using MUXControlsTestApp.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -21,23 +17,14 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
-using UniformGridLayoutItemsJustification = ModernWpf.Controls.UniformGridLayoutItemsJustification;
-using FlowLayoutLineAlignment = ModernWpf.Controls.FlowLayoutLineAlignment;
 using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
-using ElementFactory = ModernWpf.Controls.ElementFactory;
-using RecyclePool = ModernWpf.Controls.RecyclePool;
 using StackLayout = ModernWpf.Controls.StackLayout;
-using FlowLayout = ModernWpf.Controls.FlowLayout;
 using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
 using ItemsRepeaterScrollHost = ModernWpf.Controls.ItemsRepeaterScrollHost;
-using VirtualizingLayoutContext = ModernWpf.Controls.VirtualizingLayoutContext;
 using ElementRealizationOptions = ModernWpf.Controls.ElementRealizationOptions;
-using LayoutContext = ModernWpf.Controls.LayoutContext;
-using LayoutPanel = ModernWpf.Controls.LayoutPanel;
 using System.Windows.Media;
 using ModernWpf.Controls;
 
@@ -199,12 +186,12 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
         {
             RunOnUIThread.Execute(() =>
             {
-                var repeater = new ItemsRepeater() 
+                var repeater = new ItemsRepeater()
                 {
                     ItemsSource = Enumerable.Range(0, 1)
                 };
 
-                Content = new ScrollViewer() 
+                Content = new ScrollViewer()
                 {
                     Content = repeater,
                     Width = 400,

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using ModernWpf.Media.ColorPalette;
+using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Threading;
-using Microsoft.Win32;
-using ModernWpf.Media.ColorPalette;
 using Windows.UI.ViewManagement;
 
 namespace ModernWpf

@@ -1,28 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using ModernWpf.Controls;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Automation;
-using System;
-
-using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
-using NavigationView = ModernWpf.Controls.NavigationView;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
-using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
 using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
-using NavigationViewItemSeparator = ModernWpf.Controls.NavigationViewItemSeparator;
-using NavigationViewDisplayModeChangedEventArgs = ModernWpf.Controls.NavigationViewDisplayModeChangedEventArgs;
-using ModernWpf.Controls;
 
 namespace MUXControlsTestApp
 {
@@ -31,7 +14,7 @@ namespace MUXControlsTestApp
     /// </summary>
     public sealed partial class NavigationViewRS3Page : TestPage
     {
-         public NavigationViewRS3Page()
+        public NavigationViewRS3Page()
         {
             this.InitializeComponent();
 
@@ -78,7 +61,7 @@ namespace MUXControlsTestApp
             {
                 Grid paneContentGrid = rootGrid.FindName("TogglePaneTopPadding") as Grid;
                 TestResult.Text = paneContentGrid.Height.ToString();
-            }           
+            }
         }
 
         private void GetToggleButtonRowHeight_Click(object sender, RoutedEventArgs e)

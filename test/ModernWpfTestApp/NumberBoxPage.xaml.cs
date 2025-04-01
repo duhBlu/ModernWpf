@@ -1,20 +1,18 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using ModernWpf;
 using ModernWpf.Controls;
+using MUXControlsTestApp.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.IO;
-using System.Xml;
-using Windows.Globalization.NumberFormatting;
 using System.Windows;
 using System.Windows.Automation;
 using System.Windows.Controls;
-using System.Windows.Markup;
-using MUXControlsTestApp.Utilities;
-using ModernWpf;
 using System.Windows.Input;
+using System.Windows.Markup;
+using Windows.Globalization.NumberFormatting;
 
 namespace MUXControlsTestApp
 {
@@ -38,7 +36,7 @@ namespace MUXControlsTestApp
             {
                 var scopeName = new InputScopeName();
                 scopeName.NameValue = (InputScopeNameValue)Enum.Parse(typeof(InputScopeNameValue), item.Content?.ToString() ?? string.Empty, true);
-                
+
                 var scope = new InputScope();
                 scope.Names.Add(scopeName);
 
@@ -171,7 +169,7 @@ namespace MUXControlsTestApp
 
         private void ToggleHeaderValueButton_Click(object sender, RoutedEventArgs e)
         {
-            if(HeaderTestingNumberBox.Header is null)
+            if (HeaderTestingNumberBox.Header is null)
             {
                 var demoHeader = new TextBlock();
                 demoHeader.SetValue(AutomationProperties.NameProperty, "NumberBoxHeaderClippingDemoHeader");
@@ -181,7 +179,7 @@ namespace MUXControlsTestApp
             else
             {
                 // Switching between normal header and empty string header
-                if(HeaderTestingNumberBox.Header as string is null)
+                if (HeaderTestingNumberBox.Header as string is null)
                 {
                     HeaderTestingNumberBox.Header = "";
                 }
@@ -196,7 +194,7 @@ namespace MUXControlsTestApp
         {
             if (HeaderTemplateTestingNumberBox.HeaderTemplate is null)
             {
-                string templateString = 
+                string templateString =
                 @"<DataTemplate 
                 xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""> 
                     <TextBlock AutomationProperties.Name=""HeaderTemplateTestingBlock"" Text=""Some text""/> 
@@ -224,7 +222,7 @@ namespace MUXControlsTestApp
     public class DataModelWithINPC : INotifyPropertyChanged
     {
         private double _value;
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

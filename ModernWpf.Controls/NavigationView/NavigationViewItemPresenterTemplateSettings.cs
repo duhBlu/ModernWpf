@@ -8,7 +8,7 @@ namespace ModernWpf.Controls.Primitives
     public class NavigationViewItemPresenterTemplateSettings : DependencyObject
     {
         public NavigationViewItemPresenterTemplateSettings()
-        {                
+        {
         }
 
         #region IconWidth

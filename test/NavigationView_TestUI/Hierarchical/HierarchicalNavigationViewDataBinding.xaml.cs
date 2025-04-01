@@ -5,10 +5,9 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-
-using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
-using NavigationViewItemExpandingEventArgs = ModernWpf.Controls.NavigationViewItemExpandingEventArgs;
 using NavigationViewItemCollapsedEventArgs = ModernWpf.Controls.NavigationViewItemCollapsedEventArgs;
+using NavigationViewItemExpandingEventArgs = ModernWpf.Controls.NavigationViewItemExpandingEventArgs;
+using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
 using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
 
 namespace MUXControlsTestApp
@@ -87,7 +86,7 @@ namespace MUXControlsTestApp
         private void PrintSelectedItem(object sender, RoutedEventArgs e)
         {
             var selectedItem = navview.SelectedItem;
-            if(selectedItem != null)
+            if (selectedItem != null)
             {
                 var label = ((Category)selectedItem).Content;
                 SelectedItemLabel.Text = label;
@@ -110,7 +109,7 @@ namespace MUXControlsTestApp
         private void SelectSecondItem(object sender, RoutedEventArgs e)
         {
             navview.SelectedItem = categories[1];
-        }        
+        }
         private void SelectItemUsingAPI(object sender, RoutedEventArgs e)
         {
             navview.SelectedItem = categories[0].Children[0].Children[1];
@@ -138,7 +137,7 @@ namespace MUXControlsTestApp
             // Verify that returned item corresponds to the returned container
             var item = (Category)e.CollapsedItem;
             var areItemAndContainerTheSame = "false";
-            if((string)(item.Content) == collapsedItemContainerContent)
+            if ((string)(item.Content) == collapsedItemContainerContent)
             {
                 areItemAndContainerTheSame = "true";
             }

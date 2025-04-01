@@ -3,7 +3,6 @@
 
 using System;
 using System.Windows;
-using System.Windows.Controls;
 
 using NavigationView = ModernWpf.Controls.NavigationView;
 using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;

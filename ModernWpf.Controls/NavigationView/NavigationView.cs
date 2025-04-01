@@ -774,7 +774,8 @@ namespace ModernWpf.Controls
                         UpdateSelectionForMenuItems();
                         return MenuItems;
                     }
-                };
+                }
+                ;
                 itemsSource = init();
             }
 
@@ -1079,7 +1080,8 @@ namespace ModernWpf.Controls
                         }
                     }
                     return NavigationRecommendedTransitionDirection.Default;
-                };
+                }
+                ;
                 recommendedDirection = init();
             }
 

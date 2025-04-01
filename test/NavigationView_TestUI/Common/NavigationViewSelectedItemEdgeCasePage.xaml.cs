@@ -1,27 +1,11 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Automation;
-
-using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
-using NavigationView = ModernWpf.Controls.NavigationView;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
-using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
-using NavigationViewItemSeparator = ModernWpf.Controls.NavigationViewItemSeparator;
-using NavigationViewDisplayModeChangedEventArgs = ModernWpf.Controls.NavigationViewDisplayModeChangedEventArgs;
 using ModernWpf.Controls;
+using System.Windows;
+using NavigationView = ModernWpf.Controls.NavigationView;
+using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
+using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
 
 namespace MUXControlsTestApp
 {

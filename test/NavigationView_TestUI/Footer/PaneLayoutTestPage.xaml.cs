@@ -24,7 +24,8 @@ namespace MUXControlsTestApp
             for (int i = 0; i < 3; i++)
             {
                 menuItems.Add(
-                    new NavigationViewItem() {
+                    new NavigationViewItem()
+                    {
                         Content = "Item #" + i.ToString()
                     }
                 );
@@ -34,7 +35,8 @@ namespace MUXControlsTestApp
             for (int i = 0; i < 3; i++)
             {
                 footerItems.Add(
-                    new NavigationViewItem() {
+                    new NavigationViewItem()
+                    {
                         Content = "Footer #" + i.ToString()
                     }
                 );

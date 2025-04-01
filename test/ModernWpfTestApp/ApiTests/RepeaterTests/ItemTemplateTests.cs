@@ -6,7 +6,6 @@ using MUXControlsTestApp.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
@@ -21,21 +20,19 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
 {
     using ElementFactoryGetArgs = ModernWpf.Controls.ElementFactoryGetArgs;
     using ElementFactoryRecycleArgs = ModernWpf.Controls.ElementFactoryRecycleArgs;
-    using ItemsRepeaterScrollHost = ModernWpf.Controls.ItemsRepeaterScrollHost;
     using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
+    using ItemsRepeaterScrollHost = ModernWpf.Controls.ItemsRepeaterScrollHost;
     using RecyclePool = ModernWpf.Controls.RecyclePool;
     using RecyclingElementFactory = ModernWpf.Controls.RecyclingElementFactory;
     using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
     using SelectTemplateEventArgs = ModernWpf.Controls.SelectTemplateEventArgs;
     using StackLayout = ModernWpf.Controls.StackLayout;
-    using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 
     [TestClass]
     public class ItemTemplateTests : ApiTestBase
@@ -616,7 +613,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                         </DataTemplate>");
                 ItemsRepeater repeater = null;
                 const int numItems = 10;
-                var selector = new MyContainerSelector() {
+                var selector = new MyContainerSelector()
+                {
                     TemplateOdd = dataTemplateOdd,
                     TemplateEven = dataTemplateEven
                 };
@@ -670,7 +668,8 @@ namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests
                 try
                 {
                     Content.UpdateLayout();
-                } catch(Exception e)
+                }
+                catch (Exception e)
                 {
                     threwException = true;
                     Verify.IsTrue(e.Message.Contains("Null encountered as data template. That is not a valid value for a data template, and can not be used."));

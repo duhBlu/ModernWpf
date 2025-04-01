@@ -2,12 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
-using System.Collections.Generic;
 using System.Windows;
-using ModernWpf.Controls;
-
-using ItemsSourceView = ModernWpf.Controls.ItemsSourceView;
-using NonVirtualizingLayoutContext = ModernWpf.Controls.NonVirtualizingLayoutContext;
 using VirtualizingLayout = ModernWpf.Controls.VirtualizingLayout;
 using VirtualizingLayoutContext = ModernWpf.Controls.VirtualizingLayoutContext;
 

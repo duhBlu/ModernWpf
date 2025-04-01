@@ -57,7 +57,8 @@ namespace ModernWpf.Controls
                 // Template returned null, so insert empty element to render nothing
                 if (element == null)
                 {
-                    element = new Rectangle {
+                    element = new Rectangle
+                    {
                         Width = 0,
                         Height = 0
                     };

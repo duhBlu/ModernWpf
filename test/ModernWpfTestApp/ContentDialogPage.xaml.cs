@@ -38,7 +38,8 @@ namespace MUXControlsTestApp
 
         private void ShowBorderThickness_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new ContentDialog {
+            var dialog = new ContentDialog
+            {
                 Title = "Title",
                 Content = "I am testing border thickness",
                 IsPrimaryButtonEnabled = true,

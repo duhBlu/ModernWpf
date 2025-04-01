@@ -368,7 +368,8 @@ namespace ModernWpf.Controls.Primitives
                 {
                     Control primaryCommandAsControl = element as Control;
                     return IsControlFocusable(primaryCommandAsControl, checkTabStop);
-                };
+                }
+                ;
 
                 var primaryCommands = PrimaryCommands;
                 for (int i = primaryCommands.Count - 1; i >= 0; i--)

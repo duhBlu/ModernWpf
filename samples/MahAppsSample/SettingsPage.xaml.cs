@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace MahAppsSample
+﻿namespace MahAppsSample
 {
     public partial class SettingsPage
     {

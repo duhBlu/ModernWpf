@@ -2,12 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using MUXControlsTestApp.Utilities;
-using ModernWpf.Controls;
-using ModernWpf.Controls.Primitives;
-using ModernWpf;
-using System.Threading;
 using System;
-using ModernWpf.Media;
 using Common;
 
 #if USING_TAEF
@@ -16,7 +11,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using StackLayout = ModernWpf.Controls.StackLayout;
@@ -25,7 +19,6 @@ using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
 using NonVirtualizingLayout = ModernWpf.Controls.NonVirtualizingLayout;
 using NonVirtualizingLayoutContext = ModernWpf.Controls.NonVirtualizingLayoutContext;
 using System.Windows;
-using System.Windows.Media;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
@@ -140,7 +133,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
                     Orientation = Orientation.Vertical
                 };
                 panel.Layout = stackLayout;
-                
+
                 button1 = new Button { Height = 100, Content = "1" };
                 button2 = new Button { Height = 100, Content = "2" };
                 panel.Children.Add(button1);
@@ -205,7 +198,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
         }
     }
 
-    public class MyCustomNonVirtualizingStackLayout: NonVirtualizingLayout
+    public class MyCustomNonVirtualizingStackLayout : NonVirtualizingLayout
     {
         protected override Size MeasureOverride(NonVirtualizingLayoutContext context, Size availableSize)
         {

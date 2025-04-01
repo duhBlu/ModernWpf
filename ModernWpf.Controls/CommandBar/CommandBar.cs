@@ -172,7 +172,7 @@ namespace ModernWpf.Controls
             ((CommandBar)d).OnIsDynamicOverflowEnabledChanged();
         }
 
-        private  void OnIsDynamicOverflowEnabledChanged()
+        private void OnIsDynamicOverflowEnabledChanged()
         {
             UpdateOverflowModeForPrimaryCommands(PrimaryCommands.OfType<DependencyObject>());
             UpdateOverflowModeForSecondaryCommands(SecondaryCommands.OfType<DependencyObject>());

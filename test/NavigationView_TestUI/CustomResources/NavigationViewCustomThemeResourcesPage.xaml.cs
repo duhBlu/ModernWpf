@@ -1,16 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using ModernWpf.Controls;
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using Windows.ApplicationModel.Core;
-
 using NavigationViewBackButtonVisible = ModernWpf.Controls.NavigationViewBackButtonVisible;
 using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
-using System.Globalization;
-using ModernWpf.Controls;
 
 namespace MUXControlsTestApp
 {
@@ -223,14 +220,14 @@ namespace MUXControlsTestApp
                 if (control != null)
                 {
                     margin = control.Margin.ToString();
-                }                
+                }
             }
             HeaderContentMarginResult.Text = margin;
         }
 
         private void GetNavViewActiveVisualStates_Click(object sender, RoutedEventArgs e)
         {
-            var visualstates = Utilities.VisualStateHelper.GetCurrentVisualStateName(NavView);           
+            var visualstates = Utilities.VisualStateHelper.GetCurrentVisualStateName(NavView);
             NavViewActiveVisualStatesResult.Text = string.Join(",", visualstates);
         }
 

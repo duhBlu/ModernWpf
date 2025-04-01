@@ -2,13 +2,12 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using ModernWpf.Controls;
+using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common;
 using System;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common;
 
 namespace MUXControlsTestApp.Samples
 {

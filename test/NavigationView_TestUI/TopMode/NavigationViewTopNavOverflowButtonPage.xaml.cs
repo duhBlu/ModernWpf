@@ -16,7 +16,7 @@ namespace MUXControlsTestApp
 
         private void AddItem4Button_Click(object sender, RoutedEventArgs e)
         {
-            var menuItem = new NavigationViewItem 
+            var menuItem = new NavigationViewItem
             {
                 Content = $"Menu Item 4",
             };

@@ -2,21 +2,19 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using MUXControlsTestApp.Samples.Model;
+using MUXControlsTestApp.Utilities;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Navigation;
-using MUXControlsTestApp.Utilities;
-
-using RecyclePool = ModernWpf.Controls.RecyclePool;
 using ItemsRepeater = ModernWpf.Controls.ItemsRepeater;
-using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
-using StackLayout = ModernWpf.Controls.StackLayout;
-using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
 using Page = ModernWpf.Controls.Page;
+using RecyclePool = ModernWpf.Controls.RecyclePool;
+using RepeaterTestHooks = Microsoft.UI.Private.Controls.RepeaterTestHooks;
+using StackLayout = ModernWpf.Controls.StackLayout;
+using UniformGridLayout = ModernWpf.Controls.UniformGridLayout;
 
 namespace MUXControlsTestApp.Samples
 {

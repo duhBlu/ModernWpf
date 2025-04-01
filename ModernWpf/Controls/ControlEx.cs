@@ -1,6 +1,6 @@
-﻿using System.Windows;
+﻿using ModernWpf.Controls.Primitives;
+using System.Windows;
 using System.Windows.Controls;
-using ModernWpf.Controls.Primitives;
 
 namespace ModernWpf.Controls
 {

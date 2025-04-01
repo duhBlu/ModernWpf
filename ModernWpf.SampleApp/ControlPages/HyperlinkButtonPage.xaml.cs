@@ -1,6 +1,4 @@
-﻿using SamplesCommon;
-using System.Windows;
-using System.Windows.Navigation;
+﻿using System.Windows;
 
 namespace ModernWpf.SampleApp.ControlPages
 {

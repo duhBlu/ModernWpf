@@ -31,8 +31,7 @@
     <PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.6.4" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '3.0')) and $([MSBuild]::VersionLessThan($(TargetFrameworkVersion), '5.0')) or
-                        '$(TargetFrameworkIdentifier)' == '.NETFramework' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '4.6.1'))">
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETCoreApp' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '3.0')) and $([MSBuild]::VersionLessThan($(TargetFrameworkVersion), '5.0')) or&#xD;&#xA;                        '$(TargetFrameworkIdentifier)' == '.NETFramework' and $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '4.6.1'))">
     <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.18362.2005" />
   </ItemGroup>
 
@@ -59,18 +58,45 @@
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
+  <ItemGroup Condition="$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="2.7.0" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.2.1-beta">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
 
+  <!-- Prevents MSBuild from compiling the XAML file -->
   <ItemGroup>
     <Page Remove="Properties\DesignTimeResources.xaml" />
+    <Page Remove="Styles\PropertyGrid.xaml" />
+    <None Remove="Assets\PropertyGrid\**" />
+  </ItemGroup>
+  
+  <!-- Adds the file as a non-compiling resource (design-time only) -->
+  <ItemGroup>
+    <None Include="Properties\DesignTimeResources.xaml" />
+  </ItemGroup>
+
+  <!-- Include if Extended Toolkit is supported -->
+  <ItemGroup Condition="$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <Page Include="Styles\PropertyGrid.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Properties\DesignTimeResources.xaml" />
+    <Resource Include="Assets\PropertyGrid\**" />
+  </ItemGroup>
+
+  <!-- if Extended Toolkit is not supported, just make the file visible in sln -->
+  <ItemGroup Condition="!$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <None Include="Styles\PropertyGrid.xaml">
+      <Visible>true</Visible>
+    </None>
+    <None Include="Assets\PropertyGrid\**">
+      <Visible>true</Visible>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

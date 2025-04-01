@@ -18,7 +18,6 @@ using WEX.TestExecution.Markup;
 using WEX.Logging.Interop;
 #else
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 #endif
 
 using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
@@ -260,7 +259,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
         {
             var navView = SetupNavigationView();
 
-            foreach(var paneDisplayMode in Enum.GetValues(typeof(NavigationViewPaneDisplayMode)))
+            foreach (var paneDisplayMode in Enum.GetValues(typeof(NavigationViewPaneDisplayMode)))
             {
                 RunOnUIThread.Execute(() =>
                 {
@@ -363,7 +362,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
                 {
                     Verify.IsFalse(navView.IsPaneOpen, "NavigationView pane should have been closed");
                 });
-                
+
                 Log.Comment("Verify pane is closed when launched in compact state and IsPaneOpen=true");
                 navView = SetupNavView(NavigationViewPaneDisplayMode.Auto, true, NavigationViewDisplayMode.Compact);
 
@@ -784,13 +783,13 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
 
                 var expandPeer = NavigationViewItemAutomationPeer.CreatePeerForElement(menuItem1).GetPattern(PatternInterface.ExpandCollapse);
 
-                Verify.IsNull(expandPeer,"Verify NavigationViewItem with no children has no ExpandCollapse pattern");
+                Verify.IsNull(expandPeer, "Verify NavigationViewItem with no children has no ExpandCollapse pattern");
 
                 expandPeer = NavigationViewItemAutomationPeer.CreatePeerForElement(menuItem2).GetPattern(PatternInterface.ExpandCollapse);
-                Verify.IsNotNull(expandPeer,"Verify NavigationViewItem with children has an ExpandCollapse pattern provided");
+                Verify.IsNotNull(expandPeer, "Verify NavigationViewItem with children has an ExpandCollapse pattern provided");
 
                 expandPeer = NavigationViewItemAutomationPeer.CreatePeerForElement(menuItem4).GetPattern(PatternInterface.ExpandCollapse);
-                Verify.IsNotNull(expandPeer,"Verify NavigationViewItem without children but with UnrealizedChildren set to true has an ExpandCollapse pattern provided");
+                Verify.IsNotNull(expandPeer, "Verify NavigationViewItem without children but with UnrealizedChildren set to true has an ExpandCollapse pattern provided");
             });
         }
 
@@ -1156,7 +1155,7 @@ namespace ModernWpf.Tests.MUXControls.ApiTests
 
                 var childItem = new NavigationViewItem() { Content = "Item 1.1" };
                 var parentItem = new NavigationViewItem() { Content = "Item 1", MenuItemsSource = new ObservableCollection<NavigationViewItem>() { childItem } };
-                navView.MenuItemsSource = new ObservableCollection<NavigationViewItem>() { parentItem };             
+                navView.MenuItemsSource = new ObservableCollection<NavigationViewItem>() { parentItem };
 
                 Content.UpdateLayout();
             });

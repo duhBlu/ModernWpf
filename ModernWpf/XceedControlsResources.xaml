@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!-- These styles are only valid in specific .Net versions. To a Global search for 'EXTENDED_WPF_TOOLKIT_27_SUPPORTED' and the Defintion will be in the 'Directory.Build.targets' file-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles/PropertyGrid.xaml" />
+        <!--<ResourceDictionary Source="Styles/AvalonDock.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

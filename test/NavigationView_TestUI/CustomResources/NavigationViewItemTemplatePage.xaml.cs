@@ -2,19 +2,12 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Automation;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Navigation;
-
-using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
 //using MaterialHelperTestApi = Microsoft.UI.Private.Media.MaterialHelperTestApi;
 using NavigationView = ModernWpf.Controls.NavigationView;
 using NavigationViewItemInvokedEventArgs = ModernWpf.Controls.NavigationViewItemInvokedEventArgs;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
+using NavigationViewPaneDisplayMode = ModernWpf.Controls.NavigationViewPaneDisplayMode;
 
 namespace MUXControlsTestApp
 {
@@ -50,10 +43,10 @@ namespace MUXControlsTestApp
     {
         public NavigationViewItemTemplatePage()
         {
-            this.InitializeComponent();          
+            this.InitializeComponent();
         }
 
-        
+
         private void FlipOrientation_Click(object sender, RoutedEventArgs e)
         {
             NavView.PaneDisplayMode = NavView.PaneDisplayMode == NavigationViewPaneDisplayMode.Top ? NavigationViewPaneDisplayMode.Auto : NavigationViewPaneDisplayMode.Top;
@@ -63,7 +56,7 @@ namespace MUXControlsTestApp
         {
             var children = (Customer)args.SelectedItemContainer.Content;
             var customer = (Customer)args.SelectedItem;
-            if(children != null && customer != null)
+            if (children != null && customer != null)
             {
                 SelectionEventResult.Text = "Passed";
             }

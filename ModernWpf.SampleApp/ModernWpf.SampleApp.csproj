@@ -5,6 +5,10 @@
     <TargetFrameworks>net45;net48;netcoreapp3.1;net6.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
+
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+    
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(TargetFramework)' == 'net45'">
@@ -50,6 +54,42 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="ControlPages\PropertyGridPage.xaml.cs;obj\**;bin\**" />
+    <Page Include="**\*.xaml" Exclude="ControlPages\PropertyGridPage.xaml;obj\**;bin\**" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="2.7.0" />
+  </ItemGroup>
+
+  <!-- Completely remove PropertyGridPage.xaml from unsupported TFMs -->
+  <ItemGroup Condition="!$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <Page Remove="ControlPages\PropertyGridPage.xaml" />
+    <Compile Remove="ControlPages\PropertyGridPage.xaml.cs" />
+  </ItemGroup>
+
+  <!-- Add them back only when toolkit is supported -->
+  <ItemGroup Condition="$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <Page Include="ControlPages\PropertyGridPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ControlPages\PropertyGridPage.xaml.cs">
+      <DependentUpon>PropertyGridPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <!-- This just makes them visible when not supported -->
+  <ItemGroup Condition="!$(DefineConstants.Contains('EXTENDED_WPF_TOOLKIT_27_SUPPORTED'))">
+    <None Include="ControlPages\PropertyGridPage.xaml">
+      <Visible>true</Visible>
+    </None>
+    <None Include="ControlPages\PropertyGridPage.xaml.cs">
+      <Visible>true</Visible>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Assets\**" />
   </ItemGroup>
 
@@ -78,5 +118,4 @@
       <ContainsDesignTimeResources>True</ContainsDesignTimeResources>
     </None>
   </ItemGroup>
-
 </Project>

@@ -3,9 +3,8 @@
 
 using System;
 using System.Windows;
-
-using NonVirtualizingLayoutContext = ModernWpf.Controls.NonVirtualizingLayoutContext;
 using NonVirtualizingLayout = ModernWpf.Controls.NonVirtualizingLayout;
+using NonVirtualizingLayoutContext = ModernWpf.Controls.NonVirtualizingLayoutContext;
 
 namespace ModernWpf.Tests.MUXControls.ApiTests.RepeaterTests.Common
 {

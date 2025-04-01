@@ -1,7 +1,5 @@
 ﻿using ModernWpf.Controls;
-using ModernWpf.Controls.Primitives;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace ModernWpf.SampleApp.ControlPages
 {

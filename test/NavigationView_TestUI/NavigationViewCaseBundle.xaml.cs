@@ -3,13 +3,6 @@
 
 using System.Windows.Controls;
 
-using NavigationViewDisplayMode = ModernWpf.Controls.NavigationViewDisplayMode;
-using NavigationView = ModernWpf.Controls.NavigationView;
-using NavigationViewSelectionChangedEventArgs = ModernWpf.Controls.NavigationViewSelectionChangedEventArgs;
-using NavigationViewItem = ModernWpf.Controls.NavigationViewItem;
-using NavigationViewItemSeparator = ModernWpf.Controls.NavigationViewItemSeparator;
-using NavigationViewDisplayModeChangedEventArgs = ModernWpf.Controls.NavigationViewDisplayModeChangedEventArgs;
-
 namespace MUXControlsTestApp
 {
     [TopLevelTestPage(Name = "NavigationView", Icon = "NavigationView.png")]
