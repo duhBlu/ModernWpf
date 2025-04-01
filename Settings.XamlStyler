@@ -1,6 +1,6 @@
 {
     "AttributesTolerance": 1,
-    "KeepFirstAttributeOnSameLine": false,
+    "KeepFirstAttributeOnSameLine": true,
     "MaxAttributeCharactersPerLine": 0,
     "MaxAttributesPerLine": 1,
     "NewlineExemptionElements": "
@@ -72,7 +72,7 @@
         "mc:Ignorable, d:IsDataSource, d:LayoutOverrides, d:IsStaticText",
         "Storyboard.*, From, To, Duration"
     ],
-    "FirstLineAttributes": "",
+    "FirstLineAttributes": "x:Key, x:Class, x:Name",
     "OrderAttributesByName": true,
     "PutEndingBracketOnNewLine": false,
     "RemoveEndingTagOfEmptyElement": true,
